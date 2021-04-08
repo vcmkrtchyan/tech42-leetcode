@@ -2,8 +2,7 @@ class Solution {
     public int[] twoSum(int[] numbers, int target) {
         int first = 0;
         int second;
-        int sub;
-        
+        int sub;        
         while (true) {
             sub = target - numbers[first];
             second = Arrays.binarySearch(numbers,sub);

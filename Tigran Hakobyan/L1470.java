@@ -1,18 +1,13 @@
 class Solution {
     public int[] shuffle(int[] nums, int n) {
+        int firstCounter = 0, secondCounter = n;
         
-        int[] resault = new int[n*2];
-        resault[0] = nums[0];
-        int j =0;
-        int k = 1;
+        int[] resault = new int[nums.length];
         
-        for(int i = 1; i<nums.length; i++){
-            if (i%2 !=0){
-                resault[i] = nums[n+(j++)];
-            }else{
-                resault[i] = nums[k++];
-            }
+        for(int i = 0; i< nums.length;){
+            resault[i++] = nums[firstCounter++];
+            resault[i++] = nums[secondCounter++];
         }
-        return resault;
+        return resault;   
     }
 }

@@ -15,7 +15,7 @@ class Solution {
     }
 }
 
-class Solution {
+class Solution1 {
     public int[] twoSum(int[] numbers, int target) {
         int[] resault = new int[2];
         
@@ -36,7 +36,7 @@ class Solution {
 }
 
 // My best solution
-class Solution {
+class Solution2 {
     public int[] twoSum(int[] numbers, int target) {
  
             int[] resault = new int[2];

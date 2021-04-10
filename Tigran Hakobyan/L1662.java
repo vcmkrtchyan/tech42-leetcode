@@ -1,16 +1,16 @@
 class Solution {
     public boolean arrayStringsAreEqual(String[] word1, String[] word2) {
       int length = word1.length>= word2.length ? word1.length : word2.length;
-        String s1 = "";
-        String s2 = "";
+        StringBuilder sb1 = new StringBuilder();
+        StringBuilder sb2 = new StringBuilder();
         for (int i = 0; i<length; i++){
             if(i<word1.length){
-                s1 += word1[i];
+                sb1.append(word1[i]);
             }
             if(i<word2.length){
-                s2 += word2[i];
+                sb2.append(word2[i]);
             }
         }
-        return s1.equals(s2);
+        return sb1.toString().equals(sb2.toString());
     }
 }

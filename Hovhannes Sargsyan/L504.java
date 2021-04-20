@@ -1,9 +1,11 @@
-int i = 1;
-int total = 0;
-while (num != 0) {
-    total += (num % 7) * i;
-    i *= 10;
-    num /= 7;
-}        
-return Integer.toString(total);
+class Solution {
+    public String convertToBase7(int num) {
+      int result = 0, x = 1;
+        while (num != 0) {
+            result+=(num % 7)* x;
+            x*=10;
+            num/= 7;
+        }        
+        return Integer.toString(result);
+    }
 }

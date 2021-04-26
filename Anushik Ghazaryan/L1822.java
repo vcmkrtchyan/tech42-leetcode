@@ -1,9 +1,5 @@
 class Solution {
     public int arraySign(int[] nums) {
-        return product(nums);
-    }
-    
-    private int product(int[] num) {
         int res = 1;
         
         for(int i : num) {

@@ -1,0 +1,35 @@
+class Solution {
+    public boolean judgeCircle(String moves) {
+        
+        char[] steps = moves.toCharArray();
+        int x = 0;
+        int y = 0;
+        
+        for(char step: steps) {
+            switch(step) {
+                    case 'U': {
+                        y += 1;
+                        break;
+                    }
+                    case 'D': {
+                        y -= 1;
+                        break;
+                    }
+                    case 'R' : {
+                        x += 1;
+                        break;
+                    }
+                    case 'L': {
+                        x -= 1;
+                    }
+                    default: break;
+            }       
+        }
+     
+        if(x == 0 && y == 0) {
+            return true;
+        }
+        
+        return false;   
+    }
+}

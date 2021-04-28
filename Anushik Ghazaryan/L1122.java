@@ -14,7 +14,7 @@ class Solution {
             }
         }
         
-        for(int i = 0; i < count.length; i++){
+        for(int i = 0; i < 1001; i++){
             while(count[i] > 0){
                 arr1[index++] = i;
                 count[i]--;

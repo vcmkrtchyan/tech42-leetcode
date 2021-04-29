@@ -1,4 +1,4 @@
-class Solution {
+class Solution1 {
     public int[] relativeSortArray(int[] arr1, int[] arr2) {
         
         Map<Integer, Integer> m = new HashMap();
@@ -28,5 +28,30 @@ class Solution {
         
         Arrays.sort(result, index, result.length);
         return result;
+    }
+}
+
+class Solution2 {
+    public int[] relativeSortArray(int[] arr1, int[] arr2) {
+        
+        int [] maxArray = new int [1001];
+        for (int i : arr1) {
+            maxArray[i]++;
+        }
+        
+        int j = 0;
+        for (int i : arr2) {
+            while (maxArray[i]-- > 0) {
+                arr1[j++] = i;
+            }
+        }
+        
+        for (int i = 0; i < maxArray.length; i++) {
+            while(maxArray[i]-- > 0) {
+                arr1[j++] = i;
+            }
+        }
+        
+        return arr1;
     }
 }

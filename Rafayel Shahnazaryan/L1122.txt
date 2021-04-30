@@ -1,0 +1,36 @@
+class Solution {
+    public int[] relativeSortArray(int[] arr1, int[] arr2) {
+        
+        int[] result = new int[arr1.length];
+        int[] indexes = new int[1001];
+        
+        for(int i = 0; i < arr1.length; i++) {
+            indexes[arr1[i]]++;
+        }
+        
+        
+        int k = 0;
+        for(int i = 0; i < arr2.length; i++) {
+            while(indexes[arr2[i]] != 0) {
+                result[k] = arr2[i];
+                k++;
+                indexes[arr2[i]] = indexes[arr2[i]] - 1;
+            }
+        }
+        
+        
+        for(int i = 0; i < indexes.length; i++) {
+            while(indexes[i] != 0) {
+                result[k] = i;
+                k++;
+                indexes[i] = indexes[i] - 1;
+            }
+            if(k == arr1.length) {
+                break;
+            }
+            
+        }
+        
+        return result;   
+    }
+}

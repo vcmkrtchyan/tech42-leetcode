@@ -22,6 +22,9 @@ class Solution {
         for (char ch : n.toCharArray()) {
             if (ch - 0b00110000 > max)
                 max = ch - 0b00110000;
+              if (max == 0b00001001){
+                    return max;
+            }
         }
         return max;
     }

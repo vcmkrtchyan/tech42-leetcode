@@ -16,15 +16,13 @@ class Solution {
     
     //////////////////////
     
-    class Solution {
+ class Solution {
     public int minPartitions(String n) {
-        int num = 0;
-        for (int i = 9; i >= 0; i--){
-           if (n.contains("" + i)){
-               num = i; 
-               return num;
-           }
+        int max = 0b00000000;
+        for (char ch : n.toCharArray()) {
+            if (ch - 0b00110000 > max)
+                max = ch - 0b00110000;
         }
-        return num;
+        return max;
     }
 }

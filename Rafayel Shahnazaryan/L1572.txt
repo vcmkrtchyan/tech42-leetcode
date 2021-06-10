@@ -1,0 +1,40 @@
+<<<<<<< HEAD
+class Solution {
+    public int diagonalSum(int[][] mat) {
+        
+        int result = 0;
+        int j;
+        
+        for(int i = 0; i < mat.length; i++) {
+            if(i != (mat.length-i-1)) {
+                result+=mat[i][i];   
+                result+=mat[i][mat.length-i-1];
+            } else {
+                System.out.println("a");
+                result+=mat[i][i];   
+            }
+            
+        }
+        return result;
+    }
+=======
+class Solution {
+    public int diagonalSum(int[][] mat) {
+        
+        int result = 0;
+        int j;
+        
+        for(int i = 0; i < mat.length; i++) {
+            if(i != (mat.length-i-1)) {
+                result+=mat[i][i];   
+                result+=mat[i][mat.length-i-1];
+            } else {
+                System.out.println("a");
+                result+=mat[i][i];   
+            }
+            
+        }
+        return result;
+    }
+>>>>>>> a788dac7da0bfe1604b68ce9889574c32d796dd2
+}

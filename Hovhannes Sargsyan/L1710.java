@@ -2,7 +2,7 @@ class Solution {
     public int maximumUnits(int[][] boxTypes, int truckSize) {
         int [] arr = new int [1001];
 
-        for(int i =0; i < boxTypes.length; i++){
+        for(int i = 0; i < boxTypes.length; i++){
             arr[boxTypes[i][1]] += boxTypes[i][0];
         }
 

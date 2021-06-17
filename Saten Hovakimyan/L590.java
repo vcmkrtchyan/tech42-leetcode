@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class L590 {
     List<Integer> listPostorderTraversal = new ArrayList<>();
     public List<Integer> postorder(Node root) {

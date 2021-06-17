@@ -13,7 +13,7 @@ public class L167 {
                 break;
             }
             if (numbers[i] + numbers[j] < target) {
-                i++;
+                i++;    
             }
         }
         return newArr;

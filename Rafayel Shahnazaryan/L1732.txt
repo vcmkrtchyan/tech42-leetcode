@@ -1,0 +1,17 @@
+class Solution {
+    public int largestAltitude(int[] gain) {
+        
+        int currentLevel = 0;
+        int result = 0;
+        
+        for(int i = 0; i < gain.length; i++) {
+            int nextLevel = gain[i];
+            currentLevel = nextLevel+currentLevel;
+            if(currentLevel > result) {
+                result = currentLevel;
+            }
+        }
+        
+        return result;
+    }
+}

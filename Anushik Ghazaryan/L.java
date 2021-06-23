@@ -33,3 +33,25 @@ class Solution {
         }
     }
 }
+
+// its not working
+//class Solution {
+//    int location;
+//    int length;
+//
+//    public String longestPalindrome(String s) {
+//        int len = s.length();
+//
+//        for(int i = len-1; i >= 0; i--) {
+//            for(int j = 0; j < len - i; j++) {
+//                for(int k = 0; k <= i/2; k++) {
+//                    if(s.charAt(k+j) != s.charAt(j+i-k-1)) {
+//                        break;
+//                    }
+//                }
+//                return s.substring(j, j+i);
+//            }
+//        }
+//        return null;
+//    }
+//}
